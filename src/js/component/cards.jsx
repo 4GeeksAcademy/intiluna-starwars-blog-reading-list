@@ -8,7 +8,7 @@ export const Cards = (props) => {
 		//initialize state here
 	});
 
-	const { store } = useContext(Context);
+	const { store,actions } = useContext(Context);
 	const navigate = useNavigate();
 
 	function handleDetalle(e) {
@@ -16,6 +16,26 @@ export const Cards = (props) => {
 		navigate("/details_character/"+props.id)
 
 		console.log(props.id); // si no se reinicia
+		//actions.deleteContacts(props.id);
+	}
+
+	function handleFavorito(e) {
+		e.preventDefault();
+		if(store.favoritos.indexOf(props.name) !==-1 ){
+			console.log("favorito ya existe...eliminamos")
+			actions.deleteFromFavoritos(props.name)
+
+
+		} else {
+			actions.addToFavoritos(props.name);
+		}
+		
+		
+			
+		
+		
+		//console.log(store.favoritos);
+		//console.log(props.name); // si no se reinicia
 		//actions.deleteContacts(props.id);
 	}
 
@@ -30,7 +50,7 @@ export const Cards = (props) => {
                 <div className="m-1">
 					
 					<button type="button" className="btn btn-primary" onClick={e => handleDetalle(e)}>Learn more!</button>
-					<button type="button" className="btn btn-outline-warning ms-5"><i className="fa-regular fa-heart"></i></button>
+					<button type="button" className="btn btn-outline-warning ms-5" onClick={e => handleFavorito(e)}><i className="fa-regular fa-heart"></i></button>
 				</div>
 				
             </div>

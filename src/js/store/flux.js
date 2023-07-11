@@ -4,6 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			
 			characters: [],
 			detalle:{},
+			favoritos: [],
 			
 
 			demo: [
@@ -67,6 +68,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 					//.then(data => console.log(data))
 					.then(data => setStore({ detalle: data.result.properties }))
 					.catch(error => console.log(error));
+			},
+
+			addToFavoritos:(name)=>{
+				setStore({favoritos: getStore().favoritos.concat(name)})
+			},
+
+			deleteFromFavoritos:(name)=>{
+				setStore({favoritos: getStore().favoritos.filter((elemento)=>elemento!=name)})
+				//const nuevaLista = tareasApi.filter((elemento)=>elemento!=item)
+        
 			}
 
 			
