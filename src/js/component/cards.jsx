@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export const Cards = (props) => {
@@ -9,6 +9,15 @@ export const Cards = (props) => {
 	});
 
 	const { store } = useContext(Context);
+	const navigate = useNavigate();
+
+	function handleDetalle(e) {
+		e.preventDefault();
+		navigate("/details_character/"+props.id)
+
+		console.log(props.id); // si no se reinicia
+		//actions.deleteContacts(props.id);
+	}
 
 	//<a href={props.url} className="btn btn-primary">Learn more!</a> pasaba datos detalles
 
@@ -20,7 +29,7 @@ export const Cards = (props) => {
                 <p className="card-text">{props.id}</p>
                 <div className="m-1">
 					
-					<button type="button" className="btn btn-primary">Learn more!</button>
+					<button type="button" className="btn btn-primary" onClick={e => handleDetalle(e)}>Learn more!</button>
 					<button type="button" className="btn btn-outline-warning ms-5"><i className="fa-regular fa-heart"></i></button>
 				</div>
 				
