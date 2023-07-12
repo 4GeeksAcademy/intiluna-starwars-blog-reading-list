@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 export const Navbar = (props) => {
 	
 	const { store,actions } = useContext(Context);
-	console.log(store.favoritos);
+	//console.log(store.favoritos);
 
 	function handleDeleteFavorito(e) {
 		e.preventDefault();
-		console.log(e)	
+	//	console.log(e)	
 		//actions.deleteFromFavoritos(props.name)
 		}
 	

@@ -14,8 +14,10 @@ export const Cards = (props) => {
 	function handleDetalle(e) {
 		e.preventDefault();
 		navigate("/details_character/"+props.id)
+		//navigate("/details_planet/"+props.id)
+		//navigate("/details_starship/"+props.id)
 
-		console.log(props.id); // si no se reinicia
+		//console.log(props.id); // si no se reinicia
 		//actions.deleteContacts(props.id);
 	}
 

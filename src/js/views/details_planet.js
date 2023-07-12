@@ -16,7 +16,7 @@ export const DetailPlanet = () => {
 	// 	actions.getCharacters();
 	// }, []);
 
-	console.log(store.characters);
+	console.log(store.planets);
 
 	return(
 	
