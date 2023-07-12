@@ -42,40 +42,45 @@ export const DetailCharacter = () => {
 
 		</div>
 
-			<hr></hr>
+		<hr className="text-danger"></hr>
+
+			
 
 		<div className="container-fluid">
 
-			<div className="row flex-row"></div>
-			
+			<div className="row flex-row text-danger">
 				<div className="col">
-					<h3>Name</h3>
+					<h5>Name</h5>
 					<p>{store.detalle.name}</p>
 				</div>
 			
 				<div className="col">
-					<h3>Birth Year</h3>
+					<h5>Birth Year</h5>
 					<p>{store.detalle.birth_year}</p>
 				</div>
 			
 				<div className="col">
-					<h3>Gender</h3>
+					<h5>Gender</h5>
 					<p>{store.detalle.gender}</p>
 				</div>
 
 				<div className="col">
-					<h3>Height</h3>
+					<h5>Height</h5>
 					<p>{store.detalle.height}</p>
 				
 				</div>
 				<div className="col">
-					<h3>Skin Color</h3>
+					<h5>Skin Color</h5>
 					<p>{store.detalle.skin_color}</p>
 				</div>
 				<div className="col">
-					<h3>Eye Color</h3>
+					<h5>Eye Color</h5>
 					<p>{store.detalle.eye_color}</p>
+					
 				</div>
+			</div>
+			
+				
 
 			
 		</div>
