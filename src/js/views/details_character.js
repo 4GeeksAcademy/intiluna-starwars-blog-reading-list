@@ -26,43 +26,58 @@ export const DetailCharacter = () => {
 		
 		<div className="container-fluid">
 			<div className="row flex-row">
-				<div className="espacio-imagen-detalle">
-					<img src="https://picsum.photos/200/100" className="imagen_detalle" alt=""/> 
+				<div className="col">
+					<img src="https://picsum.photos/400/200" className="myphoto ms-4 mt-4" alt="..."/> 
+					
+					
 				</div>
-				<div>
+
+				<div className="col">
 					<h3>{store.detalle.name}</h3>
-					<p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+					<p className="col">sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
 				</div>
-			
-			</div>
-			
-			<div className="container-fluid">
-			<div className="row flex-row">
-				<div>
-					<h3>Name</h3>
-					<p>{store.detalle.name}</p>
-				</div>
-				
-				<div>
-					<h3>Birth Year</h3>
-					<p>{store.detalle.birth_year}</p>
-				</div>
-				
-				<div>
-					<h3>Gender</h3>
-					<p>{store.detalle.gender}</p>
-				</div>
-				
-				<h3>Height</h3>
-				<p>{store.detalle.height}</p>
-				<h3>Skin Color</h3>
-				<p>{store.detalle.skin_color}</p>
-				<h3>Eye Color</h3>
-				<p>{store.detalle.eye_color}</p>
-			</div>
+
 			
 			</div>
 
+		</div>
+
+			<hr></hr>
+
+		<div className="container-fluid">
+
+			<div className="row flex-row"></div>
+			
+				<div className="col">
+					<h3>Name</h3>
+					<p>{store.detalle.name}</p>
+				</div>
+			
+				<div className="col">
+					<h3>Birth Year</h3>
+					<p>{store.detalle.birth_year}</p>
+				</div>
+			
+				<div className="col">
+					<h3>Gender</h3>
+					<p>{store.detalle.gender}</p>
+				</div>
+
+				<div className="col">
+					<h3>Height</h3>
+					<p>{store.detalle.height}</p>
+				
+				</div>
+				<div className="col">
+					<h3>Skin Color</h3>
+					<p>{store.detalle.skin_color}</p>
+				</div>
+				<div className="col">
+					<h3>Eye Color</h3>
+					<p>{store.detalle.eye_color}</p>
+				</div>
+
+			
 		</div>
 		
 		

@@ -38,7 +38,7 @@ export const Navbar = (props) => {
 								</li>
 								
 							  ))
-							: "Cargando ;)"}
+							: "(empty)"}
 						
             			
   				        
