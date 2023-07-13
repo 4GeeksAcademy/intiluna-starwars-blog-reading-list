@@ -12,18 +12,18 @@ export const Details=()=>{
 
     console.log(params.type==="planet"? "Planetas": "Otros")
 // if type character return {<DetailCharacter/>}
-    if (params.type==="character"){
+    if (params.type==="people"){
         return (
             <DetailCharacter/>
         )
             
         
-    } else if (params.type==="planet"){
+    } else if (params.type==="planets"){
         return (
             <DetailPlanet/>
         )
 
-    } else if (params.type==="starship"){
+    } else if (params.type==="starships"){
         return (
             <DetailStarship/>
         )

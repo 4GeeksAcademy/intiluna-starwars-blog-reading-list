@@ -84,8 +84,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			// get detalle
-			getDetalle:(id)=> {
-				fetch(`https://www.swapi.tech/api/people/${id}`, {
+			getDetalle:(type,id)=> {
+				fetch(`https://www.swapi.tech/api/${type}/${id}`, {
 					method: "GET"
 				})
 					.then(response => response.json())

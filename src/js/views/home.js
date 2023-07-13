@@ -32,7 +32,7 @@ export const Home = () => {
 										name={item.name}
 										url={item.url}
 										id={item.uid}
-										ruta={"/character/"+ item.uid}
+										ruta={"/people/"+ item.uid}
 										
 									/>
 							  ))
@@ -55,7 +55,7 @@ export const Home = () => {
 										name={item.name}
 										url={item.url}
 										id={item.uid}
-										ruta={"/planet/"+ item.uid}
+										ruta={"/planets/"+ item.uid}
 										
 									/>
 							  ))
@@ -78,7 +78,7 @@ export const Home = () => {
 										name={item.name}
 										url={item.url}
 										id={item.uid}
-										ruta={"/starship/"+ item.uid}
+										ruta={"/starships/"+ item.uid}
 										
 									/>
 							  ))

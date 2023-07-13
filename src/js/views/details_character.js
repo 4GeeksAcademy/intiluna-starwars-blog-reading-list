@@ -13,7 +13,7 @@ export const DetailCharacter = () => {
 	console.log(params);
 	//llamamos a detalle de contacto al iniciar pagina
 	useEffect(() => {
-	 	actions.getDetalle(params.id);
+	 	actions.getDetalle(params.type,params.id);
 		
 	 }, []);
 
