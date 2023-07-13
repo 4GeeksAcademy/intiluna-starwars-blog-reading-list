@@ -78,6 +78,7 @@ export const Home = () => {
 										name={item.name}
 										url={item.url}
 										id={item.uid}
+										ruta={"/starship/"+ item.uid}
 										
 									/>
 							  ))
