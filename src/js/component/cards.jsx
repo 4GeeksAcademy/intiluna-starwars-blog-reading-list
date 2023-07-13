@@ -13,7 +13,8 @@ export const Cards = (props) => {
 
 	function handleDetalle(e) {
 		e.preventDefault();
-		navigate("/details_character/"+props.id)
+		//navigate("/details_character/"+props.id)
+		navigate(props.ruta)
 		//navigate("/details_planet/"+props.id)
 		//navigate("/details_starship/"+props.id)
 

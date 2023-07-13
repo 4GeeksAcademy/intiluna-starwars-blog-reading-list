@@ -32,6 +32,7 @@ export const Home = () => {
 										name={item.name}
 										url={item.url}
 										id={item.uid}
+										ruta={"/character/"+ item.uid}
 										
 									/>
 							  ))
@@ -54,6 +55,7 @@ export const Home = () => {
 										name={item.name}
 										url={item.url}
 										id={item.uid}
+										ruta={"/planet/"+ item.uid}
 										
 									/>
 							  ))

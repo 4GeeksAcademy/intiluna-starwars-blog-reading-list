@@ -14,6 +14,7 @@ export const DetailCharacter = () => {
 	//llamamos a detalle de contacto al iniciar pagina
 	useEffect(() => {
 	 	actions.getDetalle(params.id);
+		
 	 }, []);
 
 	console.log(store.detalle);

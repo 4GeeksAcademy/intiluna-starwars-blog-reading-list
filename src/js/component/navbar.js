@@ -8,10 +8,10 @@ export const Navbar = (props) => {
 	const { store,actions } = useContext(Context);
 	//console.log(store.favoritos);
 
-	function handleDeleteFavorito(e) {
-		e.preventDefault();
-	//	console.log(e)	
-		//actions.deleteFromFavoritos(props.name)
+	function handleDeleteFavorito(item) {
+		//e.preventDefault();
+		console.log(item)	
+		//actions.deleteFromFavoritos(item.name)
 		}
 	
 	return (
@@ -26,15 +26,15 @@ export const Navbar = (props) => {
 					<button type="button" className="btn btn-outline-warning ms-5" onClick={e => handleDeleteFavorito(e)}><i className="fa-solid fa-trash"></i>{item}</button>
 				</Link> */}
 				<li className="nav-item dropdown ">
-          			<a className="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          			<a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             			Favorites {store.favoritos.length}
           			</a>
-          			<ul className="dropdown-menu " aria-labelledby="navbarDropdown">
+          			<ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 					  {store.favoritos.length > 0
-							? store.favoritos.map(item => (
-								<li key={item} >
+							? store.favoritos.map((item,i) => (
+								<li key={i} >
 										
-									<a className="dropdown-item" href="#" onClick={e => handleDeleteFavorito(e)}>{item} <i className="fa-solid fa-trash"></i></a>
+									<a className="dropdown-item"  href="#" onClick={e => handleDeleteFavorito(item)}>{item} <i className="fa-solid fa-trash"></i></a>
 								</li>
 								
 							  ))
