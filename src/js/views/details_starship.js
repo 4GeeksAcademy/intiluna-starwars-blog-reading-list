@@ -17,7 +17,7 @@ export const DetailStarship = () => {
 		
 	 }, []);
 
-	console.log(store.detalle);
+	//console.log(store.detalle);
 
 	return(
 	
@@ -34,7 +34,7 @@ export const DetailStarship = () => {
 				</div>
 
 				<div className="col">
-					<h3>{store.detalle.name}</h3>
+					<h3>{JSON.parse(localStorage.getItem("detalle")).name}</h3>
 					<p className="col">sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
 				</div>
 
@@ -52,35 +52,35 @@ export const DetailStarship = () => {
 			<div className="row flex-row text-danger">
 				<div className="col">
 					<h5>Name</h5>
-					<p>{store.detalle.name}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).name}</p>
 				</div>
 			
 				<div className="col">
 					<h5>Model</h5>
-					<p>{store.detalle.model}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).model}</p>
 				</div>
 			
 				<div className="col">
 					<h5>Starship Class</h5>
-					<p>{store.detalle.starship_class}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).starship_class}</p>
 				</div>
 
 				<div className="col">
 					<h5>Manufacturer</h5>
-					<p>{store.detalle.manufacturer}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).manufacturer}</p>
 				
 				</div>
 				<div className="col">
 					<h5>Crew</h5>
-					<p>{store.detalle.crew}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).crew}</p>
 				</div>
 				<div className="col">
 					<h5>Passengers</h5>
-					<p>{store.detalle.passengers}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).passengers}</p>
 				</div>
 				<div className="col">
 					<h5>Hyperdrive rating</h5>
-					<p>{store.detalle.hyperdrive_rating}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).hyperdrive_rating}</p>
 				</div> 
 			</div>
 			

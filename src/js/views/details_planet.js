@@ -17,12 +17,13 @@ export const DetailPlanet = () => {
 		
 	 }, []);
 
-	console.log(store.detalle);
+	//console.log(store.detalle);
+	//console.log(JSON.parse(localStorage.getItem("detalle")).url);
 
 	return(
 	
 
-<div className="text-center mt-5">
+	<div className="text-center mt-5">
 		<h2>Planet's detail</h2>
 		
 		<div className="container-fluid">
@@ -34,7 +35,8 @@ export const DetailPlanet = () => {
 				</div>
 
 				<div className="col">
-					<h3>{store.detalle.name}</h3>
+					{/* <h3>{store.detalle.name}</h3> para data que viene de API*/}
+					<h3>{JSON.parse(localStorage.getItem("detalle")).name}</h3>
 					<p className="col">sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
 				</div>
 
@@ -52,35 +54,36 @@ export const DetailPlanet = () => {
 			<div className="row flex-row text-danger">
 				<div className="col">
 					<h5>Name</h5>
-					<p>{store.detalle.name}</p>
+					{/* <p>{store.detalle.name}</p> */}
+					<p>{JSON.parse(localStorage.getItem("detalle")).name}</p>
 				</div>
 			
 				<div className="col">
 					<h5>Diameter</h5>
-					<p>{store.detalle.diameter}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).diameter}</p>
 				</div>
 			
 				<div className="col">
 					<h5>Rotation Period</h5>
-					<p>{store.detalle.rotation_period}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).rotation_period}</p>
 				</div>
 
 				<div className="col">
 					<h5>Orbital Period</h5>
-					<p>{store.detalle.orbital_period}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).orbital_period}</p>
 				
 				</div>
 				<div className="col">
 					<h5>Gravity</h5>
-					<p>{store.detalle.gravity}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).gravity}</p>
 				</div>
 				<div className="col">
 					<h5>Population</h5>
-					<p>{store.detalle.population}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).population}</p>
 				</div>
 				<div className="col">
 					<h5>Climate</h5>
-					<p>{store.detalle.climate}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).climate}</p>
 				</div> 
 			</div>
 			

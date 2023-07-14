@@ -15,7 +15,7 @@ export const Home = () => {
 	// }, []);
 
 	//console.log(store.characters);
-	console.log(store.planets);
+	//console.log(store.planets);
 
 	return(
 	

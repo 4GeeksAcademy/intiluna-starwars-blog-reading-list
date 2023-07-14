@@ -17,7 +17,7 @@ export const DetailCharacter = () => {
 		
 	 }, []);
 
-	console.log(store.detalle);
+	//console.log(store.detalle);
 
 	return(
 	
@@ -34,7 +34,7 @@ export const DetailCharacter = () => {
 				</div>
 
 				<div className="col">
-					<h3>{store.detalle.name}</h3>
+					<h3>{JSON.parse(localStorage.getItem("detalle")).name}</h3>
 					<p className="col">sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
 				</div>
 
@@ -52,31 +52,31 @@ export const DetailCharacter = () => {
 			<div className="row flex-row text-danger">
 				<div className="col">
 					<h5>Name</h5>
-					<p>{store.detalle.name}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).name}</p>
 				</div>
 			
 				<div className="col">
 					<h5>Birth Year</h5>
-					<p>{store.detalle.birth_year}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).birth_year}</p>
 				</div>
 			
 				<div className="col">
 					<h5>Gender</h5>
-					<p>{store.detalle.gender}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).gender}</p>
 				</div>
 
 				<div className="col">
 					<h5>Height</h5>
-					<p>{store.detalle.height}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).height}</p>
 				
 				</div>
 				<div className="col">
 					<h5>Skin Color</h5>
-					<p>{store.detalle.skin_color}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).skin_color}</p>
 				</div>
 				<div className="col">
 					<h5>Eye Color</h5>
-					<p>{store.detalle.eye_color}</p>
+					<p>{JSON.parse(localStorage.getItem("detalle")).eye_color}</p>
 					
 				</div>
 			</div>

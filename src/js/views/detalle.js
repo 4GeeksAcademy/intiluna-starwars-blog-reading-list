@@ -10,7 +10,7 @@ import { useParams } from "react-router"
 export const Details=()=>{
     const params = useParams()
 
-    console.log(params.type==="planet"? "Planetas": "Otros")
+    //console.log(params.type==="planet"? "Planetas": "Otros")
 // if type character return {<DetailCharacter/>}
     if (params.type==="people"){
         return (

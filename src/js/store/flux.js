@@ -85,13 +85,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			// get detalle
 			getDetalle:(type,id)=> {
-				fetch(`https://www.swapi.tech/api/${type}/${id}`, {
+				if ( `https://www.swapi.tech/api/${type}/${id}`=== JSON.parse(localStorage.getItem("detalle")).url){
+					console.log("same URL as last fetch so we use LocalStorage")
+				} else {
+					console.log("LocalStorage does not contain requested detalle so we do a new fetch")
+					fetch(`https://www.swapi.tech/api/${type}/${id}`, {
 					method: "GET"
 				})
 					.then(response => response.json())
 					//.then(data => console.log(data))
-					.then(data => setStore({ detalle: data.result.properties }))
+					//.then(data => setStore({ detalle: data.result.properties }))
+					.then(data => {
+						setStore({ detalle: data.result.properties });
+						localStorage.setItem("detalle",JSON.stringify(getStore().detalle))
+					} )
 					.catch(error => console.log(error));
+
+				}
+
+				
 			},
 
 			addToFavoritos:(name)=>{
@@ -107,7 +119,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			handleFavorito:(name)=>{
 				//e.preventDefault();
 				if(getStore().favoritos.indexOf(name) !==-1 ){
-				console.log("favorito ya existe...eliminamos")
+				//console.log("favorito ya existe...eliminamos")
 				getActions().deleteFromFavoritos(name)
 
 
