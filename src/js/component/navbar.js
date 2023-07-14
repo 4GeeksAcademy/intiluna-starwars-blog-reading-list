@@ -8,16 +8,16 @@ export const Navbar = (props) => {
 	const { store,actions } = useContext(Context);
 	//console.log(store.favoritos);
 
-	function handleDeleteFavorito(item) {
-		//e.preventDefault();
-		console.log(item)	
-		//actions.deleteFromFavoritos(item.name)
-		}
+	// function handleDeleteFavorito(item) {
+	// 	//e.preventDefault();
+	// 	console.log(item)	
+	// 	//actions.deleteFromFavoritos(item.name)
+	// 	}
 	
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1"><img width="50" height="50" src="https://img.icons8.com/ios/50/star-wars.png" alt="star-wars"/></span>
+				<span className="navbar-brand m-4 h1"><img width="50" height="50" src="https://img.icons8.com/ios/50/star-wars.png" alt="star-wars"/></span>
 			</Link>
 			<div className="ml-auto">
 				{/* <Link to="/demo">
@@ -34,7 +34,7 @@ export const Navbar = (props) => {
 							? store.favoritos.map((item,i) => (
 								<li key={i} >
 										
-									<a className="dropdown-item"  href="#" onClick={e => handleDeleteFavorito(item)}>{item} <i className="fa-solid fa-trash"></i></a>
+									<a className="dropdown-item"  href="#" onClick={e => actions.handleFavorito(item)}>{item} <i className="fa-solid fa-trash"></i></a>
 								</li>
 								
 							  ))

@@ -102,6 +102,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({favoritos: getStore().favoritos.filter((elemento)=>elemento!=name)})
 				//const nuevaLista = tareasApi.filter((elemento)=>elemento!=item)
         
+			},
+
+			handleFavorito:(name)=>{
+				//e.preventDefault();
+				if(getStore().favoritos.indexOf(name) !==-1 ){
+				console.log("favorito ya existe...eliminamos")
+				getActions().deleteFromFavoritos(name)
+
+
+				} else {
+				getActions().addToFavoritos(name);
+				}
+		
+        
 			}
 
 			

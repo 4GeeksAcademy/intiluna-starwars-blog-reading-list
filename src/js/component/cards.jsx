@@ -22,16 +22,16 @@ export const Cards = (props) => {
 		//actions.deleteContacts(props.id);
 	}
 
-	function handleFavorito(e) {
-		e.preventDefault();
-		if(store.favoritos.indexOf(props.name) !==-1 ){
-			console.log("favorito ya existe...eliminamos")
-			actions.deleteFromFavoritos(props.name)
+	// function handleFavorito(e) {
+	// 	e.preventDefault();
+	// 	if(store.favoritos.indexOf(props.name) !==-1 ){
+	// 		console.log("favorito ya existe...eliminamos")
+	// 		actions.deleteFromFavoritos(props.name)
 
 
-		} else {
-			actions.addToFavoritos(props.name);
-		}
+	// 	} else {
+	// 		actions.addToFavoritos(props.name);
+	// 	}
 		
 		
 			
@@ -40,9 +40,10 @@ export const Cards = (props) => {
 		//console.log(store.favoritos);
 		//console.log(props.name); // si no se reinicia
 		//actions.deleteContacts(props.id);
-	}
+	//}
 
 	//<a href={props.url} className="btn btn-primary">Learn more!</a> pasaba datos detalles
+	//onClick={e => handleDeleteFavorito(item)}>{item} 
 
 	return (
 		<div className="card" style={{width: "18rem"}}>
@@ -53,7 +54,7 @@ export const Cards = (props) => {
                 <div className="m-1">
 					
 					<button type="button" className="btn btn-primary" onClick={e => handleDetalle(e)}>Learn more!</button>
-					<button type="button" className="btn btn-outline-warning ms-5" onClick={e => handleFavorito(e)}><i className="fa-regular fa-heart"></i></button>
+					<button type="button" className="btn btn-outline-warning ms-5" onClick={e => actions.handleFavorito(props.name)}><i className="fa-regular fa-heart"></i></button>
 				</div>
 				
             </div>
